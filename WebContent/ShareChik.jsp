@@ -104,7 +104,7 @@
   
   
 	<form name="chikForm">
-	<textarea id="theText" cols="100" rows="50" ></textarea>
+	<textarea id="theText" cols="100" rows="50" onkeyup="encode64(document.chikForm.theText.value);"></textarea>
 	<textarea id="preText" cols="100" rows="50" ></textarea>
 	</form>
 
