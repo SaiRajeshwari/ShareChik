@@ -58,7 +58,7 @@
   }
 
   function decode64() {
-	 var input = (location.href.split("#")[1] || "");
+	 var input = (location.href.split("#/")[1] || "");
      var output = "";
      var chr1, chr2, chr3 = "";
      var enc1, enc2, enc3, enc4 = "";
