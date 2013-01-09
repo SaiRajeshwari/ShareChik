@@ -12,47 +12,27 @@
 
 <script type="text/javascript" src="../nicEdit.js"></script>
 <script type="text/javascript">
-	bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+	bkLib.onDomLoaded(function() {
+		new nicEditor({ buttonList: ['bold', 'italic', 'underline', 'left', 'center', 'right', 'justify', 'ol', 'ul', 'indent', 'outdent', 'link', 'unlink'] }).panelInstance("area1"); 
+		
+	});
+
 </script>
 
 
 
 
-<table bgcolor="#000080">
-<tr>
-<td>
 
-<table>
-
-<tr>
+<div>
 
 
- <td bgcolor="#C2C2C2">
-	<h4></h4>
-	<textarea name="area1" cols="50" rows="100"></textarea>
-	<br />
- </td>
+<div><textarea id="area1" cols="100" rows="100"></textarea></div>
 
- <td>
-    
- </td>
- 
-  
-</tr>
+
+</div>
 
 
 
-<tr></tr>
-<tr></tr>
-<tr></tr>
-
-
-</table>
-
-
-</td>
-</tr>
-</table>
 
 
 </body>
