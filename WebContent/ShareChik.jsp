@@ -57,7 +57,8 @@
      //return output;
   }
 
-  function decode64(input) {
+  function decode64() {
+	 var input = (location.href.split("#")[1] || "");
      var output = "";
      var chr1, chr2, chr3 = "";
      var enc1, enc2, enc3, enc4 = "";
@@ -100,21 +101,21 @@
   }
 
   //--></script>
+  
+  
+	<form name="chikForm">
+	<textarea id="theText" cols="100" rows="50" ></textarea>
+	<textarea id="preText" cols="100" rows="50" ></textarea>
+	</form>
 
-<form name="base64Form">
-
-
-
-<div>
-<div><textarea id="theText" cols="100" rows="50" ></textarea></div>
-</div>
-
-<input type="button" name="encode" value="Encode to base64" onClick="encode64(document.base64Form.theText.value);">
-<input type="button" name="decode" value="Decode from base64" onClick="document.base64Form.theText.value=decode64(window.location.hash);">
+  <input type="button" name="encode" value="Encode to base64" onClick="encode64(document.chikForm.theText.value);">
+  <input type="button" name="decode" value="Decode from base64" onClick="document.chikForm.preText.value=decode64();">
 
 
 
-</form>
+
+
+
 
 
 </body>
