@@ -6,9 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Share Chik</title>
 </head>
-<body>
+<body onload="load();">
 
 
+
+<script>
+function load(){
+	document.chikForm.preText.value = decode64();
+}
+</script>
 
 
 <script type="text/javascript">
@@ -52,6 +58,7 @@
         enc1 = enc2 = enc3 = enc4 = "";
      } while (i < input.length);
 
+     //var output = encode64(escape(output));
      window.location.hash = "/" + output;
      
      //return output;
@@ -97,6 +104,7 @@
 
      } while (i < input.length);
 
+     //output=decode64(unescape(output));
      return unescape(output);
   }
 
@@ -108,8 +116,8 @@
 	<textarea id="preText" cols="100" rows="50" ></textarea>
 	</form>
 
-  <input type="button" name="encode" value="Encode to base64" onClick="encode64(document.chikForm.theText.value);">
-  <input type="button" name="decode" value="Decode from base64" onClick="document.chikForm.preText.value=decode64();">
+
+<input type="button" name="decode" value="Decode from base64" onClick="document.chikForm.preText.value=decode64();">
 
 
 
