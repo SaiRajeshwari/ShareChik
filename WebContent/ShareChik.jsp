@@ -4,15 +4,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="css/style1.css">
+
 <title>Share Chik</title>
 </head>
 <body onload="load();">
 
 
 
+
 <script>
 function load(){
-	document.chikForm.preText.value = decode64();
+	document.chikForm.theText.value =  document.chikForm.preText.value = decode64();
 }
 </script>
 
@@ -112,7 +115,7 @@ function load(){
   
   
 	<form name="chikForm">
-	<textarea id="theText" cols="100" rows="50" onkeyup="encode64(document.chikForm.theText.value);"></textarea>
+	<textarea id="theText" cols="100" rows="50" onkeyup="encode64(document.chikForm.theText.value);document.chikForm.preText.value=document.chikForm.theText.value"></textarea>
 	<textarea id="preText" cols="100" rows="50" ></textarea>
 	</form>
 
