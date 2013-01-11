@@ -5,12 +5,40 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="css/style1.css">
+<link rel="stylesheet" type="text/css" href="./css/style1.css">
 
 <title>Share Chik</title>
 </head>
 <body onload="load();">
 
+
+<script>
+function getUrl(){
+	return document.getElementById(result);
+}
+</script>
+
+
+
+
+    <a id="twitChik" href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-count=none data-text="share chik text ..." data-url="http://www.google.com">Tweet</a>
+
+
+
+    <script>
+    !function(d,s,id)
+    {
+    var js,fjs=d.getElementsByTagName(s)[0];
+    if(!d.getElementById(id)){
+    	js=d.createElement(s);
+    	js.id=id;
+    	js.src="https://platform.twitter.com/widgets.js";
+    	fjs.parentNode.insertBefore(js,fjs);
+    	    	
+    	}
+    }
+    (document,"script","twitter-wjs");
+    </script>
 
 
 
