@@ -12,16 +12,18 @@
 <body onload="load();">
 
 
-<script>
-function getUrl(){
-	return document.getElementById(result);
-}
-</script>
 
 
-
-
-    <a id="twitChik" href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-count=none data-text="share chik text ..." data-url="http://www.google.com">Tweet</a>
+<a 
+id="twitChik" 
+href="https://twitter.com/share" 
+class="twitter-share-button" 
+data-lang="en" 
+data-count=none 
+data-text="share chik text ..." 
+data-url="http://www.google.com">
+Tweet
+</a>
 
 
 
@@ -39,6 +41,16 @@ function getUrl(){
     }
     (document,"script","twitter-wjs");
     </script>
+
+
+
+
+
+
+
+
+
+
 
 
 
