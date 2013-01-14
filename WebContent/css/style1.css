@@ -1,11 +1,15 @@
-textarea{
-	resize: horizontal;
-	width: 600px;
-	height: 120px;
-	border: 1px solid #888; 
-	padding: 5px;
-	font-family: Tahoma, sans-serif;
-	background-position: bottom right;
-	background-repeat: no-repeat;
+body
+{
+background-color:#d0e4fe;
+background-image:url('img2.png');
+}
+
+textarea
+{
+color: #d0e4fe;
+font-style:italic;
+font-size: 20pt
+font-family:"Helvetica Neue", Helvetica, sans-serif; 
+background-color: transparent	
 }
 

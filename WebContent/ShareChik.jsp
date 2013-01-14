@@ -5,8 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="./css/style1.css">
-
+<link rel="stylesheet" type="text/css" href="../css/style1.css">
 <title>Share Chik</title>
 </head>
 <body onload="load();">
@@ -129,9 +128,19 @@ function load(){
  </form>
   
 <form name="chikForm">
+<table>
+<tr>
+<td>
 	<textarea id="theText" cols="100" rows="50" onkeyup="encode64(document.chikForm.theText.value);document.chikForm.preText.value=document.chikForm.theText.value"></textarea>
+</td>
+<td>
 	<textarea id="preText" cols="100" rows="50" ></textarea>
+</td>
+</tr>
+<tr>
 	<input type="button" name="decode" value="Decode from base64" onClick="document.chikForm.preText.value=decode64();">
+</tr>
+</table>
 </form>
 
 
