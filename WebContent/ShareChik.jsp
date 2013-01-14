@@ -14,110 +14,14 @@
 
 
 
-<a 
-id="twitChik" 
-href="https://twitter.com/share" 
-class="twitter-share-button" 
-data-lang="en" 
-data-count=none 
-data-text="share chik text ..." 
-data-url="http://www.google.com">
-Tweet
-</a>
+<table>
+<tr>
+<td><%@ include file="twitterShare.jsp" %></td>
+<td><%@ include file="myBitly.jsp" %></td>
+</tr>
+</table>
 
 
-
-    <script>
-    !function(d,s,id)
-    {
-    var js,fjs=d.getElementsByTagName(s)[0];
-    if(!d.getElementById(id)){
-    	js=d.createElement(s);
-    	js.id=id;
-    	js.src="https://platform.twitter.com/widgets.js";
-    	fjs.parentNode.insertBefore(js,fjs);
-    	    	
-    	}
-    }
-    (document,"script","twitter-wjs");
-    </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
- <script type="text/javascript" src="http://ajax.googleapis.com/
-ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function()
-{
-
-//bit_url function
-function bit_url(url)
-{
-var url=url;
-var username="sairajeshwari"; // bit.ly username
-var key="R_602ff9af58fc67c873cb7e392f38f144";
-$.ajax({
-url:"http://api.bit.ly/v3/shorten",
-data:{longUrl:url,apiKey:key,login:username},
-dataType:"jsonp",
-success:function(v)
-{
-var bit_url=v.data.url;
-$("#result").html('<a href="'+bit_url+'" target="_blank">'+bit_url+'</a>');
-}
-});
-}
-
-
-$("#short").click(function()
-{
-var url=$("#url").val();
-var urlRegex = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-var urltest=urlRegex.test(url);
-if(urltest)
-{
-bit_url(url);
-}
-else
-{
-alert("Bad URL");
-}
-});
-
-});
-</script>
-
-
-
-<input type="text" name="url" id="url"/>
-<input type="submit" id="short" value="Submit"/>
-<div id="result"></div>
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
 
 
 <script>
@@ -221,13 +125,17 @@ function load(){
   //--></script>
   
   
-	<form name="chikForm">
+ <form id="tForm">
+ </form>
+  
+<form name="chikForm">
 	<textarea id="theText" cols="100" rows="50" onkeyup="encode64(document.chikForm.theText.value);document.chikForm.preText.value=document.chikForm.theText.value"></textarea>
 	<textarea id="preText" cols="100" rows="50" ></textarea>
-	</form>
+	<input type="button" name="decode" value="Decode from base64" onClick="document.chikForm.preText.value=decode64();">
+</form>
 
 
-<input type="button" name="decode" value="Decode from base64" onClick="document.chikForm.preText.value=decode64();">
+
 
 
 
