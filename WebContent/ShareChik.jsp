@@ -10,6 +10,86 @@
 </head>
 <body onload="load();">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+
+<!--
+<script type="text/javascript" src="../js/jquery.qrcode.min.js"></script>
+-->
+
+<script type="text/javascript" src="../js/jquery.qrcode.js"></script>
+<script type="text/javascript" src="../js/qrcode.js"></script>
+
+
+
+
+
+<input type="button" value="qr create" onclick="makeQR();"/>
+
+<p>Render in table</p>
+<div id="qrcodeTable"></div>
+<p>Render in canvas</p>
+<div id="qrcodeCanvas"></div>
+<script>
+	//jQuery('#qrcode').qrcode("this plugin is great");
+	jQuery('#qrcodeTable').qrcode({
+	render	: "table",
+	text	: "http://jetienne.com"
+	});	
+	jQuery('#qrcodeCanvas').qrcode({
+	text	: "http://jetienne.com"
+	});	
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function load(){
+	document.chikForm.theText.value =  document.chikForm.preText.value = decode64();
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -23,11 +103,14 @@
 
 
 
-<script>
-function load(){
-	document.chikForm.theText.value =  document.chikForm.preText.value = decode64();
-}
-</script>
+
+
+
+
+
+
+
+
 
 
 <script type="text/javascript">
