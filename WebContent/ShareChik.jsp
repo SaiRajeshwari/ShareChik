@@ -12,16 +12,14 @@
 
 
 <input type="button" value="qr create" onclick="makeQR();"/>
-
-
-
-
+<input type=hidden id="abcId" name="abcId" value="http://www.google.com"/>
 
 
 <script>
 function makeQR()
 {
-	window.location = "http://localhost:8080/ShareChik/qrGen/";
+	var qqr = document.getElementById('abcId').value;
+	window.location = "http://localhost:8080/ShareChik/qrGen/?qrurl="+qqr;
 }
 </script>
 

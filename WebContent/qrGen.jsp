@@ -19,6 +19,13 @@
 <script type="text/javascript" src="../js/qrcode.js"></script>
 
 
+<script>
+var params = {};
+window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str,key,value) {
+  params[key] = value;
+});
+</script>
+
 
 <p>Render in table</p>
 <div id="qrcodeTable"></div>
@@ -28,7 +35,7 @@
 	//jQuery('#qrcode').qrcode("this plugin is great");
 	jQuery('#qrcodeTable').qrcode({
 	render	: "table",
-	text	: "http://jetienne.com"
+	text	: params.qrurl 
 	});	
 	jQuery('#qrcodeCanvas').qrcode({
 	text	: "http://jetienne.com"
