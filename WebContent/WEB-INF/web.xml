@@ -16,16 +16,38 @@
   
   
 <servlet>
-    <servlet-name>TestServlet</servlet-name>
+    <servlet-name>ChikServlet</servlet-name>
     <jsp-file>/ShareChik.jsp</jsp-file>
 </servlet>
 
 <servlet-mapping>
-    <servlet-name>TestServlet</servlet-name>
+    <servlet-name>ChikServlet</servlet-name>
     <url-pattern>/ShareChik/</url-pattern>
 </servlet-mapping>
   
   
+
+
+
+  
+<servlet>
+    <servlet-name>QRServlet</servlet-name>
+    <jsp-file>/qrGen.jsp</jsp-file>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>QRServlet</servlet-name>
+    <url-pattern>/qrGen/</url-pattern>
+</servlet-mapping>
+  
+
+
+
+
+
+
+
+
   
   
 </web-app>
