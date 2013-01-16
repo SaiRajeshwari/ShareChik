@@ -13,6 +13,7 @@
 
 <script>
 function load(){
+	$("#txtAreaID").width($(window).width());
 	document.chikForm.theText.value =  document.chikForm.preText.value = decode64();
 }
 </script>
@@ -177,7 +178,7 @@ function makeQR()
  </form>
   
 <form name="chikForm">
-<table>
+<table id="txtAreaID">
 <tr>
 <td>
 	<textarea id="theText" cols="100" rows="50" onkeyup="encode64(document.chikForm.theText.value);document.chikForm.preText.value=document.chikForm.theText.value"></textarea>

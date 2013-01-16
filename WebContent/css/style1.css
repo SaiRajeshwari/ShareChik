@@ -10,42 +10,42 @@ body
 
 textarea
 {
+resize: none;
 color: black;
 border-color:white;
 border-style:solid;
 border-width:15px
 font-style:italic;
-font-size: 20pt
-font-family:"Helvetica Neue", Helvetica, sans-serif; 
 background-color: transparent
 }
 
 
+
+
+
+
+
+
 .greenSolid {
-	-moz-box-shadow:inset 1px 5px 15px 4px #caefab;
-	-webkit-box-shadow:inset 1px 5px 15px 4px #caefab;
-	box-shadow:inset 1px 5px 15px 4px #caefab;
-	background-color:#77d42a;
-	-moz-border-radius:21px;
-	-webkit-border-radius:21px;
-	border-radius:21px;
-	border:3px solid #268a16;
+	-moz-box-shadow:inset 5px 5px 0px 0px #bee2f9;
+	-webkit-box-shadow:inset 5px 5px 0px 0px #bee2f9;
+	box-shadow:inset 5px 5px 0px 0px #bee2f9;
+	background-color:#63b8ee;
+	-moz-border-radius:22px;
+	-webkit-border-radius:22px;
+	border-radius:22px;
+	border:2px solid #3866a3;
 	display:inline-block;
-	color:#306108;
+	color:#14396a;
 	font-family:arial;
-	font-size:22px;
+	font-size:19px;
 	font-weight:bold;
-	padding:14px 36px;
+	padding:11px 15px;
 	text-decoration:none;
-	text-shadow:1px 0px 17px #aade7c;
-}
-
-.greenSolid:hover {
-	background-color:#5cb811;
-}
-
-
-.greenSolid:active {
+	text-shadow:1px 0px 0px #7cacde;
+}.greenSolid:hover {
+	background-color:#468ccf;
+}.greenSolid:active {
 	position:relative;
 	top:1px;
 }
