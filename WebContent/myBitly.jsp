@@ -12,7 +12,19 @@
 			
 			function copy_link()
 			{
-				var url= "http://www.ShareChik.me/" + location.href.split("#/")[1];
+				//var url= "http://www.ShareChik.me/" + location.href.split("#/")[1];
+				//Testing
+				
+				    if (location.href.indexOf('localhost') !== -1)
+                    {
+                        var url= "http://www.ShareChik.me/#/" + location.href.split("#/")[1];
+                    }
+                	else
+                    {
+                        var url= location.href;
+                    }  
+				
+				//Testing
 				
 				//console.log("URL BAR URL :");
 				//console.log(url);

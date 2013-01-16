@@ -11,7 +11,24 @@
 		<script type="text/javascript">
 			function tweet_this()
 			{
-				var url= "http://www.ShareChik.me/" + location.href.split("#/")[1];
+				//var url= "http://www.ShareChik.me/" + location.href.split("#/")[1];
+				//Testing
+				
+				
+				    if (location.href.indexOf('localhost') !== -1)
+                    {
+                        var url= "http://www.ShareChik.me/#/" + location.href.split("#/")[1];
+                    }
+                	else
+                    {
+                        var url= location.href;
+                    }      
+				                
+				//Testing                
+				
+				
+				
+				
 				
 				var username="sairajeshwari"; // bit.ly username
 				var key="R_602ff9af58fc67c873cb7e392f38f144";

@@ -44,6 +44,35 @@
 
 
 
+  
+<servlet>
+    <servlet-name>BitServlet</servlet-name>
+    <jsp-file>/myBitly.jsp</jsp-file>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>BitServlet</servlet-name>
+    <url-pattern>/myBitly/</url-pattern>
+</servlet-mapping>
+  
+
+
+
+
+  
+<servlet>
+    <servlet-name>twitServlet</servlet-name>
+    <jsp-file>/twitterShare.jsp</jsp-file>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>twitServlet</servlet-name>
+    <url-pattern>/twitterShare/</url-pattern>
+</servlet-mapping>
+  
+
+
+
 
 
 
