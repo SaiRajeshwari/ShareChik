@@ -32,7 +32,7 @@
 			
 		</script>
 	
-		<input type="text" name="url" id="url"/>
+		
 		
 		<style type="text/css">
 	

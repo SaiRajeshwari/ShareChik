@@ -9,18 +9,22 @@
 <title>Share Chik</title>
 </head>
 <body onload="load();">
-
-
-
-
-
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 
-<!--
-<script type="text/javascript" src="../js/jquery.qrcode.min.js"></script>
--->
+<script>
+function load(){
+	document.chikForm.theText.value =  document.chikForm.preText.value = decode64();
+}
+</script>
+
+
+
+
+
+
+
+
+
 
 <script type="text/javascript" src="../js/jquery.qrcode.js"></script>
 <script type="text/javascript" src="../js/qrcode.js"></script>
@@ -29,10 +33,20 @@
 
 
 
+		<style type="text/css">
+	
+		    #qrID
+		    {
+				background-color: #4D7DE1;
+				border-color: #294C89;
+	    		color: #FFFFFF;
+			    width:200px;
+			    height:49px;
+			}
+		</style>
 
 
 
-<input type="button" value="qr create" onclick="makeQR();"/>
 <input type=hidden id="abcId" name="abcId" value="http://www.google.com"/>
 
 
@@ -45,16 +59,11 @@ function makeQR()
 </script>
 
 
-<script>
-function load(){
-	document.chikForm.theText.value =  document.chikForm.preText.value = decode64();
-}
-</script>
-
 
 
 <table>
 <tr>
+<td><input id="qrID" type="button" value="Generate QR Code" onclick="makeQR();"/></td>
 <td><%@ include file="twitterShare.jsp" %></td>
 <td><%@ include file="myBitly.jsp" %></td>
 </tr>
@@ -180,9 +189,7 @@ function load(){
 	<textarea id="preText" cols="100" rows="50" ></textarea>
 </td>
 </tr>
-<tr>
-	<input type="button" name="decode" value="Decode from base64" onClick="document.chikForm.preText.value=decode64();">
-</tr>
+
 </table>
 </form>
 

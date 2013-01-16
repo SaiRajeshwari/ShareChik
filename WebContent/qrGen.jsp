@@ -29,16 +29,12 @@ window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str,key,value
 
 <p>Render in table</p>
 <div id="qrcodeTable"></div>
-<p>Render in canvas</p>
-<div id="qrcodeCanvas"></div>
+
 <script>
 	//jQuery('#qrcode').qrcode("this plugin is great");
 	jQuery('#qrcodeTable').qrcode({
 	render	: "table",
 	text	: params.qrurl 
-	});	
-	jQuery('#qrcodeCanvas').qrcode({
-	text	: "http://jetienne.com"
 	});	
 </script>
 
