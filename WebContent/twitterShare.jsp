@@ -4,6 +4,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/style1.css">
 	</head>
 	<body>
 
@@ -39,20 +40,9 @@
 			}
 		</script>
 
-		<style type="text/css">
-	
-		    #twitChik
-		    {
-		    	background: url(../images/white_twitter_bird.png) no-repeat;
-				background-color: #4D7DE1;
-				border-color: #294C89;
-	    		color: #FFFFFF;
-			    width:140px;
-			    height:49px;
-			}
-		</style>
-		
-		<button text="Tweet This" id="twitChik" onclick="tweet_this();">Tweet This</button>
+
+
+		<button class="greenSolid" text="Tweet This" id="twitChik" onclick="tweet_this();">Tweet This</button>
 
 
 	</body>

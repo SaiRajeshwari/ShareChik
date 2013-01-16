@@ -26,24 +26,19 @@ function load(){
 
 
 
+
+
+
+
+
+
+
+
 <script type="text/javascript" src="../js/jquery.qrcode.js"></script>
 <script type="text/javascript" src="../js/qrcode.js"></script>
 
 
 
-
-
-		<style type="text/css">
-	
-		    #qrID
-		    {
-				background-color: #4D7DE1;
-				border-color: #294C89;
-	    		color: #FFFFFF;
-			    width:200px;
-			    height:49px;
-			}
-		</style>
 
 
 
@@ -53,7 +48,9 @@ function load(){
 <script>
 function makeQR()
 {
-	var qqr = document.getElementById('abcId').value;
+	//var qqr = document.getElementById('abcId').value;
+	var qqr = window.location.href;
+	alert(qqr);
 	window.location = "http://localhost:8080/ShareChik/qrGen/?qrurl="+qqr;
 }
 </script>
@@ -63,7 +60,7 @@ function makeQR()
 
 <table>
 <tr>
-<td><input id="qrID" type="button" value="Generate QR Code" onclick="makeQR();"/></td>
+<td><input class="greenSolid" id="qrID" type="button" value="Generate QR Code" onclick="makeQR();"/></td>
 <td><%@ include file="twitterShare.jsp" %></td>
 <td><%@ include file="myBitly.jsp" %></td>
 </tr>

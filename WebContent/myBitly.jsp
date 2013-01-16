@@ -4,6 +4,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/style1.css">
 	</head>
 	<body>
 
@@ -32,21 +33,8 @@
 			
 		</script>
 	
-		
-		
-		<style type="text/css">
 	
-		    #short
-		    {
-				background-color: #4D7DE1;
-				border-color: #294C89;
-	    		color: #FFFFFF;
-			    width:200px;
-			    height:49px;
-			}
-		</style>
-		
-		<input type="submit" id="short" value="Save | Shorten | Share" onclick="copy_link();"/>
+		<input class="greenSolid" type="submit" id="short" value="Save | Shorten | Share" onclick="copy_link();"/>
 		<div id="result"></div>
 		 
 	</body>
