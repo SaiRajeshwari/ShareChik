@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="../css/style1.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style1.css">
 <title>Share Chik</title>
 </head>
 <body onload="load();">
@@ -17,28 +17,6 @@ function load(){
 	document.chikForm.theText.value =  document.chikForm.preText.value = decode64();
 }
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" src="../js/jquery.qrcode.js"></script>
-<script type="text/javascript" src="../js/qrcode.js"></script>
-
-
 
 
 
@@ -66,14 +44,6 @@ function makeQR()
 <td><%@ include file="myBitly.jsp" %></td>
 </tr>
 </table>
-
-
-
-
-
-
-
-
 
 
 
@@ -190,14 +160,6 @@ function makeQR()
 
 </table>
 </form>
-
-
-
-
-
-
-
-
 
 
 
