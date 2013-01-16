@@ -24,14 +24,10 @@ function load(){
 <script>
 function makeQR()
 {
-	//var qqr = document.getElementById('abcId').value;
-	var qqr = window.location.href;
-	window.location = "http://www.sharechik.me/qrGen/?qrurl="+qqr;
-	//window.location = location.hostname + "/qrGen/?qrurl=" + qqr;
-	
+    var qqr = window.location.href;
+    window.location = "http://www.sharechik.me/qrGen?qrurl="+qqr;
 }
 </script>
-
 
 
 
