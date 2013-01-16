@@ -37,7 +37,7 @@
 
 <servlet-mapping>
     <servlet-name>QRServlet</servlet-name>
-    <url-pattern>/qrGen/</url-pattern>
+    <url-pattern>/qrGen</url-pattern>
 </servlet-mapping>
   
 
