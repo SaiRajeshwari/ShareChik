@@ -49,4 +49,10 @@ background-color: transparent
 
 
 
+#twitChik
+{
+	background-image : url('../images/twitterBird.png');
+	background-repeat: no-repeat;	
+}
+
 

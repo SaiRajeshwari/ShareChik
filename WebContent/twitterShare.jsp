@@ -59,7 +59,7 @@
 
 
 
-		<button class="greenSolid" text="Tweet This" id="twitChik" onclick="tweet_this();">Tweet This</button>
+		<button class="greenSolid" text="Tweet This" id="twitChik" onclick="tweet_this();">Tweet</button>
 
 
 	</body>

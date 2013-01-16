@@ -21,16 +21,14 @@ function load(){
 
 
 
-<input type=hidden id="abcId" name="abcId" value="http://www.google.com"/>
-
-
 <script>
 function makeQR()
 {
 	//var qqr = document.getElementById('abcId').value;
 	var qqr = window.location.href;
-	alert(qqr);
-	window.location = "http://localhost:8080/ShareChik/qrGen/?qrurl="+qqr;
+	window.location = "http://www.sharechik.me/qrGen/?qrurl="+qqr;
+	//window.location = location.hostname + "/qrGen/?qrurl=" + qqr;
+	
 }
 </script>
 

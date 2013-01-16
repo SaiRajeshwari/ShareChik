@@ -35,7 +35,7 @@ window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str,key,value
 	//jQuery('#qrcode').qrcode("this plugin is great");
 	jQuery('#qrcodeTable').qrcode({
 	render	: "table",
-	text	: params.qrurl 
+	text	: "<%= request.getParameter("qrurl")%>"
 	});	
 </script>
 
