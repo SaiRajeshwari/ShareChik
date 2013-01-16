@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/qrStyle.css">
 <title>Insert title here</title>
 </head>
 <body>
@@ -27,7 +28,7 @@ window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str,key,value
 </script>
 
 
-<p>Render in table</p>
+
 <div id="qrcodeTable"></div>
 
 <script>
