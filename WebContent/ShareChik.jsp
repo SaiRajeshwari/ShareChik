@@ -21,19 +21,9 @@ function load(){
 
 
 
-<script>
-function makeQR()
-{
-    var qqr = window.location.href;
-    window.location = "http://www.sharechik.me/qrGen?qrurl="+qqr;
-}
-</script>
-
-
-
 <table>
 <tr>
-<td><input class="greenSolid" id="qrID" type="button" value="Generate QR Code" onclick="makeQR();"/></td>
+<td><%@ include file="qrGen.jsp" %></td>
 <td><%@ include file="twitterShare.jsp" %></td>
 <td><%@ include file="myBitly.jsp" %></td>
 </tr>

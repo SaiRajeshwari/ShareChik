@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Your QR</title>
+</head>
+<body>
+
+
+
+
+
+<script type="text/javascript">
+function getQueryVariable(variable) {
+	var query = window.location.search.substring(1);
+	var vars = query.split("&");
+	for (var i = 0; i < vars.length; i++) {
+	var pair = vars[i].split("=");
+	if (pair[0] == variable) {
+	return unescape(pair[1]);
+	}
+	}
+	return false;
+	} 
+</script>
+
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="../ShareChik/js/jquery.classyqr.js"></script>
+<img src="#" id="qr1" alt="" />
+<div id="qr2"></div>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+var var1 = getQueryVariable("qrurl");
+$('#qr1').ClassyQR({
+    type : 'url',
+    url  : var1
+
+});
+</script>
+<script>
+$('#qr2').ClassyQR({
+    create : true,
+    type : 'url',
+    url  :  var1
+
+});
+
+</script>
+
+</body>
+</html>

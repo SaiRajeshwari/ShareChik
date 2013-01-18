@@ -4,43 +4,53 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/qrStyle.css">
-<title>Insert title here</title>
+<title>title</title>
 </head>
 <body>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-
-<!--
-<script type="text/javascript" src="../js/jquery.qrcode.min.js"></script>
--->
-
-<script type="text/javascript" src="../js/jquery.qrcode.js"></script>
-<script type="text/javascript" src="../js/qrcode.js"></script>
-
 
 <script>
-var params = {};
-window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str,key,value) {
-  params[key] = value;
-});
+function makeQR()
+{
+	var qqr;
+
+	if (location.href.indexOf('localhost') !== -1)
+	{
+	    var url= "http://www.ShareChik.me/#/" + location.href.split("#/")[1];
+	}
+	else
+	{
+	    var url= location.href;
+	}      
+	            
+	//Testing                
+
+	var username="sairajeshwari"; // bit.ly username
+	var key="R_602ff9af58fc67c873cb7e392f38f144";
+
+	$.ajax({
+			url:"http://api.bit.ly/v3/shorten",
+			data:{longUrl:url,apiKey:key,login:username},
+			dataType:"jsonp",
+			success:function(v)
+			{
+				qqr = v.data.url;
+				window.location = "http://localhost:8080/ShareChik/qrShow.html?qrurl="+qqr;
+		 		//window.open(tweet_url, '_blank');
+		  		//window.focus();
+			}
+	});
+
+}
 </script>
 
 
 
-<div id="qrcodeTable"></div>
-
-<script>
-	//jQuery('#qrcode').qrcode("this plugin is great");
-	jQuery('#qrcodeTable').qrcode({
-	render	: "table",
-	text	: "<%= request.getParameter("qrurl")%>"+window.location.hash
-	});	
-</script>
 
 
-
+<div id='qrcodeTable'></div>
+<button class="greenSolid" id="qrChik" onclick="makeQR();">QR code</button>
 
 
 </body>
